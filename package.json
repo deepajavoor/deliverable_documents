@@ -1,0 +1,27 @@
+{
+  "name": "saucedemo-enterprise-playwright-suite",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:functional": "playwright test --grep @functional",
+    "test:security": "playwright test --grep @security",
+    "test:privacy": "playwright test --grep @privacy",
+    "test:a11y": "playwright test --grep @accessibility",
+    "test:network": "playwright test --grep @network",
+    "test:api": "playwright test --grep @api",
+    "test:performance": "playwright test --grep @performance",
+    "test:compatibility": "playwright test --grep @compatibility",
+    "test:desktop": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^26.4.0",
+    "typescript": "^5.9.2"
+  }
+}
